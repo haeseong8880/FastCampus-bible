@@ -58,3 +58,11 @@ extension FrameworkListViewController: UICollectionViewDataSource, UICollectionV
         return 10
     }
 }
+
+extension FrameworkListViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let framework = frameworkList[indexPath.item]
+        print(framework)
+        print(indexPath.item)
+    }
+}

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31DACCFA284484FB00E51691 /* FrameworkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DACCF9284484FB00E51691 /* FrameworkListViewController.swift */; };
+		31DACCFC2844873B00E51691 /* FrameworkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DACCFB2844873B00E51691 /* FrameworkCell.swift */; };
 		948CD1EB2812AD5E003DC0C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948CD1EA2812AD5E003DC0C4 /* AppDelegate.swift */; };
 		948CD1ED2812AD5E003DC0C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948CD1EC2812AD5E003DC0C4 /* SceneDelegate.swift */; };
 		948CD1F22812AD5E003DC0C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948CD1F02812AD5E003DC0C4 /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		31DACCF9284484FB00E51691 /* FrameworkListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkListViewController.swift; sourceTree = "<group>"; };
+		31DACCFB2844873B00E51691 /* FrameworkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkCell.swift; sourceTree = "<group>"; };
 		948CD1E72812AD5E003DC0C4 /* AppleFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		948CD1EA2812AD5E003DC0C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		948CD1EC2812AD5E003DC0C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +106,8 @@
 				948CD1EA2812AD5E003DC0C4 /* AppDelegate.swift */,
 				948CD1EC2812AD5E003DC0C4 /* SceneDelegate.swift */,
 				948CD21A2812ADBA003DC0C4 /* FramewokData.swift */,
+				31DACCF9284484FB00E51691 /* FrameworkListViewController.swift */,
+				31DACCFB2844873B00E51691 /* FrameworkCell.swift */,
 				948CD1F02812AD5E003DC0C4 /* Main.storyboard */,
 				948CD1F32812AD5F003DC0C4 /* Assets.xcassets */,
 				948CD1F52812AD5F003DC0C4 /* LaunchScreen.storyboard */,
@@ -261,6 +267,8 @@
 				948CD1EB2812AD5E003DC0C4 /* AppDelegate.swift in Sources */,
 				948CD1ED2812AD5E003DC0C4 /* SceneDelegate.swift in Sources */,
 				948CD21B2812ADBA003DC0C4 /* FramewokData.swift in Sources */,
+				31DACCFC2844873B00E51691 /* FrameworkCell.swift in Sources */,
+				31DACCFA284484FB00E51691 /* FrameworkListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,7 +14,18 @@ let subscription2 = arrayPublisher.sink { value in
     print("Recived Value: \(value)")
 }
 
+class MyClass {
+    var property: Int = 0{
+        didSet {
+            print("Did set property to \(property)")
+        }
+    }
+        
+}
 
+let object = MyClass()
+let subscription3 = arrayPublisher.assign(to: \.property, on: object)
+print("Final Value: \(object.property)")
 
 
 

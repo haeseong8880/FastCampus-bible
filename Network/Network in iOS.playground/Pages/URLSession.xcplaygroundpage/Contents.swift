@@ -4,15 +4,15 @@ import Foundation
 
 // configuration -> urlsession -> urlsessionTask
 
-let configuration = URLSessionConfiguration.default
-let session = URLSession(configuration: configuration)
+let configureration = URLSessionConfiguration.default
+let session = URLSession(configuration: configureration)
 
-let url = URL(string: "https://api.github.com/users/cafielo")!
+let url = URL(string: "https://api.github.com/users/haeseong8880")!
 
 let task = session.dataTask(with: url) { data, response, error in
     guard let httpResponse = response as? HTTPURLResponse,
           (200..<300).contains(httpResponse.statusCode) else {
-        print("--> response \(response)")
+        print("---> response \(response)")
         return
     }
     
@@ -20,10 +20,6 @@ let task = session.dataTask(with: url) { data, response, error in
     let result = String(data: data, encoding: .utf8)
     print(result)
 }
-
 task.resume()
-
-
-
 
 //: [Next](@next)

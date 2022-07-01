@@ -23,8 +23,6 @@ class FrameworkListViewController: UIViewController {
     var subscriptions = Set<AnyCancellable>()
     
     var viewModel: FrameworkListViewModel!
-//    let didSelect = PassthroughSubject<AppleFramework, Never>()
-//    let items = CurrentValueSubject<[AppleFramework], Never>(AppleFramework.list)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,19 +32,6 @@ class FrameworkListViewController: UIViewController {
     }
     
     private func bind() {
-        // input: 사용자 인풋을 받아서, 처리해야할것
-        // - item 선택 되었을때 처리
-//        didSelect
-//            .receive(on: RunLoop.main)
-//            .sink { [unowned self] framework in
-//            let sb = UIStoryboard(name: "Detail", bundle: nil)
-//            let vc = sb.instantiateViewController(withIdentifier: "FrameworkDetailViewController") as! FrameworkDetailViewController
-//                vc.framework.send(framework)
-//            self.present(vc, animated: true)
-//        }.store(in: &subscriptions)
-        
-        // output: data, state 변경에 따라서, UI 업데이트 할것
-        // - items 세팅이 되었을때 컬렉션뷰를 업데이트
         viewModel.items
             .receive(on: RunLoop.main)
             .sink { [unowned self] list in
@@ -59,7 +44,7 @@ class FrameworkListViewController: UIViewController {
             .sink { framework in
                 let sb = UIStoryboard(name: "Detail", bundle: nil)
                 let vc = sb.instantiateViewController(withIdentifier: "FrameworkDetailViewController") as! FrameworkDetailViewController
-                vc.framework.send(framework)
+                vc.viewModel = FrameworkDetailViewModel(framework: framework)
                 self.present(vc, animated: true)
             }.store(in: &subscriptions)
     }

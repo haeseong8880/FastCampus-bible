@@ -20,7 +20,6 @@ struct ButtonView: View {
         .frame(height: 100.0)
         .background(.orange)
         .cornerRadius(20)
-        .opacity(/*@START_MENU_TOKEN@*/4.8/*@END_MENU_TOKEN@*/)
     }
 }
 

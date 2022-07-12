@@ -12,9 +12,15 @@ struct ButtonView: View {
         Button {
             print("Click")
         } label: {
-            Text("Button")
+            Text("Click Me")
+                .font(.system(size: 20, weight: .bold, design: .default))
+                .foregroundColor(.white)
         }
-
+        .padding()
+        .frame(height: 100.0)
+        .background(.orange)
+        .cornerRadius(20)
+        .opacity(/*@START_MENU_TOKEN@*/4.8/*@END_MENU_TOKEN@*/)
     }
 }
 

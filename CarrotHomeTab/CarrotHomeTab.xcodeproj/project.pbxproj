@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		310F12F5288AC5B20024BD1F /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 310F12F3288AC5B20024BD1F /* Home.storyboard */; };
+		310F12F7288AC5EB0024BD1F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310F12F6288AC5EB0024BD1F /* HomeViewModel.swift */; };
+		310F12F9288AD0E70024BD1F /* ItemInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310F12F8288AD0E70024BD1F /* ItemInfoCell.swift */; };
+		310F12FC288AE4810024BD1F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 310F12FB288AE4810024BD1F /* Kingfisher */; };
 		319DF9382889393100967B30 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319DF9372889393100967B30 /* HomeViewController.swift */; };
 		319DF93A2889394600967B30 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319DF9392889394600967B30 /* DetailViewController.swift */; };
 		319DF93C288939D900967B30 /* MainNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319DF93B288939D900967B30 /* MainNavigationViewController.swift */; };
@@ -49,6 +53,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		310F12F4288AC5B20024BD1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CarrotHomeTab/Views/Base.lproj/Home.storyboard; sourceTree = "<group>"; };
+		310F12F6288AC5EB0024BD1F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		310F12F8288AD0E70024BD1F /* ItemInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInfoCell.swift; sourceTree = "<group>"; };
 		319DF9372889393100967B30 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		319DF9392889394600967B30 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		319DF93B288939D900967B30 /* MainNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				310F12FC288AE4810024BD1F /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +110,69 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		310F12EC288AC3F80024BD1F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				310F12F3288AC5B20024BD1F /* Home.storyboard */,
+				319DF9372889393100967B30 /* HomeViewController.swift */,
+				310F12F6288AC5EB0024BD1F /* HomeViewModel.swift */,
+				310F12F8288AD0E70024BD1F /* ItemInfoCell.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		310F12ED288AC4060024BD1F /* MyTown */ = {
+			isa = PBXGroup;
+			children = (
+				31FFB87C2889696800D3EEAF /* MyTownViewController.swift */,
+			);
+			path = MyTown;
+			sourceTree = "<group>";
+		};
+		310F12EE288AC40E0024BD1F /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				31FFB8802889697B00D3EEAF /* ChatViewController.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		310F12EF288AC4130024BD1F /* MyProfile */ = {
+			isa = PBXGroup;
+			children = (
+				31FFB87E2889697500D3EEAF /* MyProfileViewController.swift */,
+			);
+			path = MyProfile;
+			sourceTree = "<group>";
+		};
+		310F12F0288AC4210024BD1F /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				319DF93F28893A4600967B30 /* Detail.storyboard */,
+				319DF9392889394600967B30 /* DetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		310F12F1288AC4370024BD1F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				31FFB884288987B600D3EEAF /* UIBarButtonItem+CustomView.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		310F12F2288AC4590024BD1F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				94A38E57286830EA000691E1 /* Main.storyboard */,
+				319DF93B288939D900967B30 /* MainNavigationViewController.swift */,
+				319DF93D28893A0500967B30 /* MainTabBarController.swift */,
+				31FFB882288970B300D3EEAF /* CustomBarItem.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		9402EE0E28673D9C00D33FDD /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,20 +223,16 @@
 			children = (
 				94BB227D28669A15004FC34D /* AppDelegate.swift */,
 				94BB227F28669A15004FC34D /* SceneDelegate.swift */,
-				94A38E57286830EA000691E1 /* Main.storyboard */,
-				319DF93B288939D900967B30 /* MainNavigationViewController.swift */,
-				319DF93D28893A0500967B30 /* MainTabBarController.swift */,
-				31FFB884288987B600D3EEAF /* UIBarButtonItem+CustomView.swift */,
-				31FFB882288970B300D3EEAF /* CustomBarItem.swift */,
-				31FFB87C2889696800D3EEAF /* MyTownViewController.swift */,
-				31FFB87E2889697500D3EEAF /* MyProfileViewController.swift */,
-				31FFB8802889697B00D3EEAF /* ChatViewController.swift */,
-				319DF9372889393100967B30 /* HomeViewController.swift */,
-				319DF9392889394600967B30 /* DetailViewController.swift */,
-				319DF93F28893A4600967B30 /* Detail.storyboard */,
+				310F12F2288AC4590024BD1F /* Views */,
+				94A38E4B2868307C000691E1 /* Model */,
+				310F12EC288AC3F80024BD1F /* Home */,
+				310F12ED288AC4060024BD1F /* MyTown */,
+				310F12EE288AC40E0024BD1F /* Chat */,
+				310F12EF288AC4130024BD1F /* MyProfile */,
+				310F12F0288AC4210024BD1F /* Detail */,
 				9402EE1528673FB100D33FDD /* Utils */,
 				9402EE0E28673D9C00D33FDD /* Network */,
-				94A38E4B2868307C000691E1 /* Model */,
+				310F12F1288AC4370024BD1F /* Extension */,
 				94BB228628669A16004FC34D /* Assets.xcassets */,
 				94BB228828669A16004FC34D /* LaunchScreen.storyboard */,
 				94BB228B28669A16004FC34D /* Info.plist */,
@@ -207,6 +274,7 @@
 			);
 			name = CarrotHomeTab;
 			packageProductDependencies = (
+				310F12FB288AE4810024BD1F /* Kingfisher */,
 			);
 			productName = CarrotHomeTab;
 			productReference = 94BB227A28669A15004FC34D /* CarrotHomeTab.app */;
@@ -281,6 +349,7 @@
 			);
 			mainGroup = 94BB227128669A15004FC34D;
 			packageReferences = (
+				310F12FA288AE4810024BD1F /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 94BB227B28669A15004FC34D /* Products */;
 			projectDirPath = "";
@@ -299,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94BB228A28669A16004FC34D /* LaunchScreen.storyboard in Resources */,
+				310F12F5288AC5B20024BD1F /* Home.storyboard in Resources */,
 				94A38E5C286830EA000691E1 /* Main.storyboard in Resources */,
 				94BB228728669A16004FC34D /* Assets.xcassets in Resources */,
 				319DF94028893A4600967B30 /* Detail.storyboard in Resources */,
@@ -329,6 +399,7 @@
 				94BB227E28669A15004FC34D /* AppDelegate.swift in Sources */,
 				319DF93C288939D900967B30 /* MainNavigationViewController.swift in Sources */,
 				319DF93E28893A0500967B30 /* MainTabBarController.swift in Sources */,
+				310F12F7288AC5EB0024BD1F /* HomeViewModel.swift in Sources */,
 				94A38E512868307C000691E1 /* ItemInfo.swift in Sources */,
 				94BB228028669A15004FC34D /* SceneDelegate.swift in Sources */,
 				9402EE1728673FB100D33FDD /* Publisher+Utils.swift in Sources */,
@@ -340,6 +411,7 @@
 				31FFB883288970B300D3EEAF /* CustomBarItem.swift in Sources */,
 				31FFB885288987B600D3EEAF /* UIBarButtonItem+CustomView.swift in Sources */,
 				9402EE1228673D9C00D33FDD /* Resource.swift in Sources */,
+				310F12F9288AD0E70024BD1F /* ItemInfoCell.swift in Sources */,
 				319DF93A2889394600967B30 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,6 +449,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		310F12F3288AC5B20024BD1F /* Home.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				310F12F4288AC5B20024BD1F /* Base */,
+			);
+			name = Home.storyboard;
+			sourceTree = "<group>";
+		};
 		94A38E57286830EA000691E1 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -682,6 +762,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		310F12FA288AE4810024BD1F /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		310F12FB288AE4810024BD1F /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 310F12FA288AE4810024BD1F /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 94BB227228669A15004FC34D /* Project object */;
 }

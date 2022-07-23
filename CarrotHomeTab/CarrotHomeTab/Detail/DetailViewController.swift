@@ -6,24 +6,81 @@
 //
 
 import UIKit
+import Combine
+import Kingfisher
 
 class DetailViewController: UIViewController {
 
+    
+    // User
+    @IBOutlet weak var userThumbnail: UIImageView!
+    @IBOutlet weak var userNickName: UILabel!
+    @IBOutlet weak var userLocation: UILabel!
+    @IBOutlet weak var userTemperature: UILabel!
+    
+    // Item
+    @IBOutlet weak var itemThumbnail: UIImageView!
+    @IBOutlet weak var itemInfoTitle: UILabel!
+    @IBOutlet weak var itemInfoDescription: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    
+    var viewModel: DetailViewModel!
+    var subscriptions = Set<AnyCancellable>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupUI()
+        configureNavigationBar()
+        bind()
+        viewModel.fetch()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setupUI() {
+        userThumbnail.layer.masksToBounds = true
+        userThumbnail.layer.cornerRadius = 40
     }
-    */
+    
+    private func bind() {
+        viewModel.$itemInfoDetails
+            .compactMap { $0 }
+            .receive(on: RunLoop.main)
+            .sink { details in
+                self.userThumbnail.kf.setImage(with: URL(string: details.user.thumnail)!)
+                self.userNickName.text = details.user.name
+                self.userLocation.text = details.user.location
+                self.userTemperature.text = "\(details.user.temperature)°C"
+                self.itemThumbnail.kf.setImage(with: URL(string: details.item.thumbnailURL)!)
+                self.itemInfoTitle.text = details.item.title
+                self.itemInfoDescription.text = details.details.descriptions
+                self.priceLabel.text = "\(self.formatnumber(details.item.price))원"
+            }.store(in: &subscriptions)
+    }
+    
+    private func configureNavigationBar() {
 
+        let moreConfig = CustomBarItemConfiguration(
+            image: UIImage(systemName: "ellipsis")) {
+                print("----> more Click")
+            }
+        let moreItem = UIBarButtonItem.generate(with: moreConfig, width: 30)
+        
+        let shareConfig = CustomBarItemConfiguration(
+            image: UIImage(systemName: "square.and.arrow.up")) {
+                print("----> share Click")
+            }
+        let shareItem = UIBarButtonItem.generate(with: shareConfig, width: 30)
+        
+        navigationItem.rightBarButtonItems = [moreItem, shareItem]
+        navigationItem.backButtonDisplayMode = .minimal
+    }
+}
+
+extension DetailViewController {
+    private func formatnumber(_ price: Int) -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        
+        let result = formatter.string(from: NSNumber(integerLiteral: price)) ?? ""
+        return result
+    }
 }
